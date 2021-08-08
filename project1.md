@@ -46,6 +46,8 @@
 ### The only problem i encountered was when i wanted to check my ip on the browser my browser was set to default https so i couldnt connect i thouth i was wrong did the project all over again up to 4 times. it took me more than 6 hrs to figure this out because it worked on the terminal but not on the browser.
 ### well i did figure it out.
 
+## SNAPSHOT
 
+![alt text](https://github.com/Tobang1/darey.io-pbl/blob/eae717e11dd320ddd15eef891e035f21c0eed408/pbl_images/project_1_LAMP.PNG)
 
 
