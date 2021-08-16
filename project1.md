@@ -49,5 +49,3 @@
 ## SNAPSHOT
 
 ![alt text](https://github.com/Tobang1/darey.io-pbl/blob/eae717e11dd320ddd15eef891e035f21c0eed408/pbl_images/project_1_LAMP.PNG)
-
-
