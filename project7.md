@@ -62,3 +62,9 @@
 
 ## Problems encountered
 ## I didnt open the port 3306 and port 80 on my db and web server
+
+
+
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/bbe7178c179f6ffb1ed673c9ee171a88ebf4cda5/pbl_images/project7_database.png))
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/bbe7178c179f6ffb1ed673c9ee171a88ebf4cda5/pbl_images/project7_mount.png))
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/bbe7178c179f6ffb1ed673c9ee171a88ebf4cda5/pbl_images/project7_index.png))
