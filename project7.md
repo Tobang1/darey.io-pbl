@@ -52,3 +52,13 @@
 ### then i pulled the repository into my local directory (git pull https://github.com/darey-io/tooling.git)
 ### then copied the repository into my /var/ww/html directory.
 ### restart my httpd and open port 80 on security.
+### I was getting error 403 when i did curl -v to tail the file then i used (sudo setenforce 0 )
+### then changed it permanently editing the /etc/sysconfig/selinux file and set the selinux = disabled
+### Then i updated the website configuration to connect to the database in the function.php file and i applied tooling-db.sql script to the database (mysql -u webaccess tooling < tooling-db.sql -p )
+### I created new MYSQL admin user with username myuser and password password (INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, ‘user_type’, ‘status’) VALUES (1, ‘myuser’, ‘5f4dcc3b5aa765d61d8327deb882cf99’, ‘user@mail.com’, ‘admin’, ‘1’);
+
+### Teh opened my browser http://publicIP/index.php and i login with myuser as user
+
+
+## Problems encountered
+## I didnt open the port 3306 and port 80 on my db and web server
