@@ -24,3 +24,31 @@
 ### sudo chmod -R 777 /mnt/opt
 
 ### sudo systemctl restart nfs-server.service
+### Then i configured access to my subnet client under the /etc/exports file. and added the below code in the file
+### /mnt/apps <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+### /mnt/logs <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+### /mnt/opt <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+
+### then i saved it and  export it (sudo exportfs -arv)
+### I then checked which port is been used by the NFS server using (rcpinfo -p | grep nfs) and i open it under the security inbound rules.
+### i opened port TCP111, UDP 111, UDP 2049.
+
+## Configuration of the Database Server.
+### I opened a new instance for my db server using ubuntu. and created a new database called tooling and a new user named webaccesss and grant all privileges to the user on the database tooling from the webserver 
+### I did bound my address so i can connect to the database remotely from my web server
+
+## Preparing The Web Server.
+### First i spined up another instances for my Webserver using redhat
+### Then i installed NFS client (sudo yum install nfs-utils nfs4-acl-tools -y)
+### then created a new directory (sudo mkdir -p /var/www)
+### And i did mount my nfs server disk /mnt/apps on /var/www and /mnt/logs on /var/logs on my webserver (sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www)
+### then i verify my mount  using (df -h and mounted it permanently editing the /etc/fstab) added the code in the file (<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0)
+### Next i installed apache (sudo yum install httpd -y)
+### then i repeated same thing for another new server on preparing the server
+## Git Hub
+### I forked the Git tooling repository from https://github.com/darey-io/tooling.git then copy the http pull link
+### I then make a new directory /git and installed git using (yum install git)
+### then i initialize the git local directory using (git init) 
+### then i pulled the repository into my local directory (git pull https://github.com/darey-io/tooling.git)
+### then copied the repository into my /var/ww/html directory.
+### restart my httpd and open port 80 on security.
