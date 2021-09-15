@@ -53,6 +53,7 @@
 
 # PROBLEMS ENCOUNTERED
 ### The problem i encountered was i forgot to open the port 3300 and was thinking why my webpage isnt loading port 3300 then i did. also i updated my ufw for port 3300. It was great finding the solution to it.
+### If the node cant start try installing the new version off node version 12
 
 ![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/cbc7e76c55d84ea323741fdc27492651cc09565d/pbl_images/project_4_mean.PNG))
 
