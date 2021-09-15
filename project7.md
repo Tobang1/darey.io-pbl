@@ -1,5 +1,5 @@
 # DEVOPS TOOLING WEBSITE
-## COnnecting of three different servers together. 
+## Connecting of three different servers together. 
 ## NFS Server1 with Storage REDHAT
 ## Database server UBUNTU
 ## WEB SERVER REDHAT
