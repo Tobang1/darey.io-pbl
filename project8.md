@@ -71,3 +71,6 @@
 ## Problem encountered
 
 ### I forgot to configure my webserver 2 well then i got error 403. so i did the permission of setenforce 0 and it worked 
+
+
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/c580f2b566608531da60cba12f15f334bd2d0254/pbl_images/project8_load%20balancer.png))
