@@ -49,3 +49,32 @@
 ### setsebool -P httpd_execmem 1)
 
 ### Restart apache (sudo systemctl restart httpd)
+## DOWNLOADING AND SETTING UP WORDPRESS
+###  mkdir wordpress
+  ### cd   wordpress
+  ### sudo wget http://wordpress.org/latest.tar.gz
+  ### sudo tar xzvf latest.tar.gz
+  ### sudo rm -rf latest.tar.gz
+  ### cp wordpress/wp-config-sample.php wordpress/wp-config.php
+  ### cp -R wordpress /var/www/html/
+  ## Configuring the SELinux Policies
+  ### sudo chown -R apache:apache /var/www/html/wordpress
+ ### sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+  ### sudo setsebool -P httpd_can_network_connect=1
+
+  ## Installing mysql on my database Server
+  ### sudo yum update
+###  sudo yum install mysql-server
+### sudo systemctl restart mysqld
+### sudo systemctl enable mysqld
+
+## CONFIGURING DATABASE TO WORK WITH WORDPRESS 
+### sudo mysql
+### CREATE DATABASE wordpress;
+### CREATE USER myuser@<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
+### GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
+### FLUSH PRIVILEGES;
+### SHOW DATABASES;
+### exit 
+### Then i opened port 3306 to connect remotely and also bind my address to 0000
+### then install mysql client (yum install mysql ) on the webserver and open my web browser http://publicIP/wordpress
