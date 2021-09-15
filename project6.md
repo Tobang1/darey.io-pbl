@@ -84,7 +84,10 @@
 ### I did had a problem with my httpd then i restart it and it worked fine.
 
 ## Database image
-https://github.com/Tobang1/darey.io-pbl/blob/00c013a95a60d145fc3ca2345ec0160ffbb0205c/pbl_images/project6_db_wordpress.png
+
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/00c013a95a60d145fc3ca2345ec0160ffbb0205c/pbl_images/project6_db_wordpress.png))
 
 ## Webpage images
-https://github.com/Tobang1/darey.io-pbl/blob/00c013a95a60d145fc3ca2345ec0160ffbb0205c/pbl_images/project6_wordpress.png
+
+![alt text](![alt text](https://github.com/Tobang1/darey.io-pbl/blob/00c013a95a60d145fc3ca2345ec0160ffbb0205c/pbl_images/project6_wordpress.png
+))
