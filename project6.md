@@ -8,14 +8,14 @@
 ### Then i added it by attaching it to my instance using the right availability zone
 
 ## DISK MANAGEMENT
-### i used lsblk to inspect the block device attached to my server which ins in xvdf,xvdg and xvdh and used df -h to see all mount and free space on the server.
-### Then used gdisk utility to create a single partition on each of the 3 disks. using gdisk /dev/xvdf and all other disk, created new partition and write to the new partition.
-### I used lsblk to view newly configured partition which added 1 at the back of the partition name xvdf1, xvdg1, xvdh1
-### Then i installed Logical; volume using sudo yum install lvm2
-### I used Physical volume to mark the volumes to be used by lvm (pvcreate /dev/xvdf1,....)
+- ### i used lsblk to inspect the block device attached to my server which ins in xvdf,xvdg and xvdh and used df -h to see all mount and free space on the server.
+- ### Then used gdisk utility to create a single partition on each of the 3 disks. using gdisk /dev/xvdf and all other disk, created new partition and write to the new partition.
+- ### I used lsblk to view newly configured partition which added 1 at the back of the partition name xvdf1, xvdg1, xvdh1
+- ### Then i installed Logical; volume using sudo yum install lvm2
+- ### I used Physical volume to mark the volumes to be used by lvm (pvcreate /dev/xvdf1,....)
 ### Verified my Physical volumes using sudo pvs; 
-### Used vgcreate to add the physical volume to a volume group and named it webdata-vg. (sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1)
-### Then use lvcreate to create a logical volume  and used half of the physical volume size (sudo lvcreate -n apps-lv -L 14G webdata-vg)
+- ### Used vgcreate to add the physical volume to a volume group and named it webdata-vg. (sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1)
+- ### Then use lvcreate to create a logical volume  and used half of the physical volume size (sudo lvcreate -n apps-lv -L 14G webdata-vg)
 ### Verified if my lvm is mounted using sudo lvs to verify all the setup (sudo vgdisplay -v #view complete setup - VG, PV, and LV and sudo lsblk )
 ### I format the lv with ext4 filesystem format (sudo mkfs -t ext4 /dev/webdata-vg/apps-lv)
 ### Then make a directory to store websites files (sudo mkdir -p /var/www/html) also the backup log file (sudo mkdir -p /home/recovery/logs)
